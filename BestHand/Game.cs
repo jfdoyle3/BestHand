@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace High_n_Low
+namespace BestHand
 {
    public class Game
     {
        // public Card DealtCard= new Card();
+          private List<Card> p1Hand = new List<Card>();
+          public List<Card> p2Hand = new List<Card>();
 
         public Card DrawCard()
         {
@@ -19,28 +21,16 @@ namespace High_n_Low
         { 
             return (aCard.Value == DealtCard.Value && aCard.SuitSym() == DealtCard.SuitSym());
         }
-
-        public static void Play(string Guess, Card playerCard,Card drawnCard)
+        public List<Card> Hand()
         {
-            Console.WriteLine("Your Card: {0}{1}",playerCard.Value,playerCard.SuitSym());
+            for (int index = 0; index < 7; index++)
+                this.p1Hand.Add(new Card());
 
-
-            if ((Guess.ToLower()=="h") && (playerCard.Value>drawnCard.Value)|| (Guess.ToLower() == "l") && (playerCard.Value < drawnCard.Value))
-                Console.WriteLine("You Win" );
-            else if (playerCard.Value==drawnCard.Value)
-                Console.WriteLine("Draw");
-            else
-                Console.WriteLine("You Lose");
-          
-               
+            return p1Hand;
         }
+        
 
-        public string Guess()
-        {
-            Console.WriteLine("Is your card going to be (H)igher, (L)ower");
-            string guess = Console.ReadLine();
-
-            return guess;
-        }
     }
+
+    
 }
