@@ -10,19 +10,25 @@ namespace BestHand
         {
             Game p1 = new Game();
 
-            List<Card> p1Hand=p1.Hand();
+            var p1Hand=p1.Hand();
 
-            int total;
+           List<Card> deck= p1.CreateDeck();
 
-            foreach (var item in p1Hand)
+
+
+
+
+
+
+            foreach (var item in deck)
             {
-               // total = +item.Value;
+
                 Console.WriteLine("Cards:   {0} of {1}", item.Value, item.SuitSym());
             }
 
-            total = p1Hand.Count();
-            Console.WriteLine("Total Hand:  {0}",total);
-            
+
+            // Console.WriteLine("Total Hand:  {0}",p1.HandTotal(p1Hand));
+
 
         }
     }
