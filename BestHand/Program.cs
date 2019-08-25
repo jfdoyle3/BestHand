@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
+
 namespace BestHand
 {
     class Program
@@ -10,24 +11,18 @@ namespace BestHand
         {
             Game p1 = new Game();
 
-            var p1Hand=p1.Hand();
-
            List<Card> deck= p1.CreateDeck();
+           List<Card> p1Hand = new List<Card>();
+
+            
 
 
+            //IEnumerable<Card> deal = deck.Take(7);
 
+            //Output.ConsoleIt(deal);
 
+            //var hand1 = p1Hand.Add(deal);
 
-
-
-            foreach (var item in deck)
-            {
-
-                Console.WriteLine("Cards:   {0} of {1}", item.Value, item.SuitSym());
-            }
-
-
-            // Console.WriteLine("Total Hand:  {0}",p1.HandTotal(p1Hand));
 
 
         }

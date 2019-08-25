@@ -33,23 +33,21 @@ namespace BestHand
         }
         public int HandTotal(List<Card> playerHand)
         {
-
             int total = playerHand.Sum(face => face.Value);
             return total;
         }
 
         public List<Card> CreateDeck()
         {
-           
             for (int face=2; face<= 14; face++)
             {
-
               for (int suits = 0; suits <= 3; suits++)
               {
                 Card card = new Card(face,suits);
                 Deck.Add(card);
               }
             }
+
             return Deck;
         }
         
