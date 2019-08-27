@@ -5,54 +5,29 @@ using System.Linq;
 
 namespace BestHand
 {
-   public class Game
+    public class Game
     {
-        // public Card DealtCard= new Card();
-        public List<Card> Deck = new List<Card>();
-        private List<Card> p1Hand = new List<Card>();
-        public List<Card> p2Hand = new List<Card>();
-
-        public Card DrawCard()
+        public Hand p1;
+        public Hand p2;
+        public Deck deck;
+        public IEnumerable<Card> shuffle;
+        public Game()
         {
-            Card aCard = new Card();
+            this.deck = new Deck();
+            this.shuffle = deck.Shuffle();
+            this.p1= new Hand();
+            this.p2 = new Hand();  
+        }
+        public void Deal()
+        {
+            
+
+            
+        }          
+        public void Play()
+        {
            
-            return aCard;
+
         }
-
-        public bool Compare (Card aCard, Card DealtCard)
-        { 
-            return (aCard.Value == DealtCard.Value && aCard.SuitSym() == DealtCard.SuitSym());
-        }
-
-        public List<Card> Hand()
-        {
-            for (int index = 0; index < 7; index++)
-                this.p1Hand.Add(new Card());
-
-            return p1Hand;
-        }
-        public int HandTotal(List<Card> playerHand)
-        {
-            int total = playerHand.Sum(face => face.Value);
-            return total;
-        }
-
-        public List<Card> CreateDeck()
-        {
-            for (int face=2; face<= 14; face++)
-            {
-              for (int suits = 0; suits <= 3; suits++)
-              {
-                Card card = new Card(face,suits);
-                Deck.Add(card);
-              }
-            }
-
-            return Deck;
-        }
-        
-
     }
-
-    
 }

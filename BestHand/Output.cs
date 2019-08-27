@@ -16,7 +16,7 @@ namespace BestHand
                 Console.WriteLine("Card:   {0} of {1}", item.Value, item.SuitSym());
             }
 
-            Console.WriteLine("Total Cards:  {0}", deck.Count);
+          //  Console.WriteLine("Total Cards:  {0}", deck.Count);
         }
     }
 }
