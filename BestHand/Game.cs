@@ -10,19 +10,19 @@ namespace BestHand
         public Hand p1;
         public Hand p2;
         public Deck deck;
-        public IEnumerable<Card> shuffle;
+        public IEnumerable<Card> shuffled;
         public Game()
         {
             this.deck = new Deck();
-            this.shuffle = deck.Shuffle();
-            this.p1= new Hand();
-            this.p2 = new Hand();  
+            this.shuffled = deck.Shuffle();
+            //this.p1= new Hand();
+           // this.p2 = new Hand();  
         }
         public void Deal()
         {
-            
 
-            
+            Output.ConsoleIt(deck);
+      
         }          
         public void Play()
         {

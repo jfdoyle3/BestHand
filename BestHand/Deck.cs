@@ -7,7 +7,7 @@ namespace BestHand
 {
     public class Deck
     {
-        private List<Card> deck = new List<Card>();
+        public List<Card> deck = new List<Card>();
 
         public Deck()
         {
@@ -20,12 +20,25 @@ namespace BestHand
                 }
             }
         }
+
+        public Deck (int minCard, int maxCard)
+        {
+            for (int face = minCard; face <=maxCard; face++)
+            {
+                for (int suits = 0; suits <= 3; suits++)
+                {
+                    Card card = new Card(face, suits);
+                    deck.Add(card);
+                }
+            }
+        }
+
         public IEnumerable<Card> Shuffle()
         {
             Random rnd = new Random();
             IOrderedEnumerable<Card> shuffled = deck.OrderBy(Card => rnd.Next());
 
-            return shuffled;
+            return shuffled.ToList<Card>();
         }
 
     }

@@ -8,7 +8,6 @@ namespace BestHand
     {
         public int Value;
         public int Suit;
-        //private string[] Suits = { "♠", "♥", "♣", "♦" };
         private string[] Suits = { "Spades", "Hearts", "Clubs", "Diamonds" };
 
         public Card()
@@ -28,7 +27,6 @@ namespace BestHand
 
         public string SuitSym()
         {
-
             return this.Suits[this.Suit];
         }
     }

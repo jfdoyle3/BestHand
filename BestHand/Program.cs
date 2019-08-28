@@ -9,25 +9,18 @@ namespace BestHand
     {
         static void Main(string[] args)
         {
-            Game game = new Game();
-
-
-            Deck deck = new Deck();
-
-           // IEnumerable<Card> shuffled= game.Shuffle();
-           // IEnumerable<Card> deal = shuffled.Take(7);
-
-            foreach (var card in deck)
-            {
-                Console.WriteLine("Hand: {0} of {1}",card.Value,card.SuitSym());
-            }
-
-         //  Output.ConsoleIt(deal);
-
             
+            Deck deck = new Deck();
+            IEnumerable<Card> shuffled = deck.Shuffle();
+
+            for (int deal=0; deal<7; deal++)
+            {
+               
+            }
+          
 
 
-
+    
         }
     }
 }

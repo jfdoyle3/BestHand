@@ -10,10 +10,11 @@ namespace BestHand
 
         public static void ConsoleIt(dynamic deck)
         {
+            int count = 0;
             foreach (Card item in deck)
             {
-
-                Console.WriteLine("Card:   {0} of {1}", item.Value, item.SuitSym());
+                Console.WriteLine("Card {2}:   {0} of {1}", item.Value, item.SuitSym(),count);
+                count++;
             }
 
           //  Console.WriteLine("Total Cards:  {0}", deck.Count);
