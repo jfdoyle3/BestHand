@@ -15,7 +15,7 @@ namespace BestHand
         {
             this.deck = new Deck();
             this.shuffled = deck.Shuffle();
-            //this.p1= new Hand();
+           // this.p1= new Hand();
            // this.p2 = new Hand();  
         }
         public void Deal()
