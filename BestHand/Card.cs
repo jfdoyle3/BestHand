@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace BestHand
 {
@@ -22,9 +20,7 @@ namespace BestHand
         {
             this.Value = Value;
             this.Suit = Suit;
-
         }
-
         public string SuitSym()
         {
             return this.Suits[this.Suit];

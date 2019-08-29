@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace BestHand
 {
-    class Output
+    class _Output
     {
 
         public static void ConsoleIt(dynamic deck)
@@ -17,7 +17,7 @@ namespace BestHand
                 count++;
             }
 
-          //  Console.WriteLine("Total Cards:  {0}", deck.Count);
+           Console.WriteLine("Total Cards:  {0}", deck.Count);
         }
     }
 }

@@ -8,9 +8,9 @@ namespace BestHand
     public class Hand
     {
         private List<Card> hand = new List<Card>();
-        public Hand(Card Card)
+        public Hand()
         {
-            this.hand.Add(Card);
+          //  this.hand = hand.Add();
         }
         public int HandTotal(List<Card> hand)
         {
