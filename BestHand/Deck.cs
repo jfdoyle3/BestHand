@@ -15,8 +15,8 @@ namespace BestHand
             {
                 for (int suits = 0; suits <= 3; suits++)
                 {
-                    Card card = new Card(face, suits);
-                    deck.Add(card);
+                   Card card = new Card(face, suits);
+                    this.deck.Add(card);
                 }
             }
         }
@@ -28,7 +28,7 @@ namespace BestHand
                 for (int suits = 0; suits <= 3; suits++)
                 {
                     Card card = new Card(face, suits);
-                    deck.Add(card);
+                    this.deck.Add(card);
                 }
             }
         }
