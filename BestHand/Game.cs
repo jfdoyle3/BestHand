@@ -14,7 +14,7 @@ namespace BestHand
         {
             this.shuffled = deck.Shuffle();  
         }
-        public void Deal()
+        private void Deal()
         {
            
         }          
