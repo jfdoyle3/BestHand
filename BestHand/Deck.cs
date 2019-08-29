@@ -37,5 +37,10 @@ namespace BestHand
             
             return shuffled.ToList<Card>();
         }
+        
+        //public void Deal()
+        //{
+
+        //}
     }
 }
