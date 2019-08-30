@@ -8,9 +8,10 @@ namespace BestHand
     class _Output
     {
 
-        public static void ConsoleIt(dynamic deck)
+        public static void ConsoleIt(string strAdd, dynamic deck)
         {
             int count = 0;
+            Console.WriteLine("{0}",strAdd);
             foreach (Card item in deck)
             {
                 Console.WriteLine("Card {2}:   {0} of {1}", item.Value, item.SuitSym(),count);
