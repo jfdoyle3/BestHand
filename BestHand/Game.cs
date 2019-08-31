@@ -6,32 +6,51 @@ namespace BestHand
     public class Game
     {
         //public Hand p1=new Hand();
-      //public Hand p2;
+        //public Hand p2;
+        List<Card> p1 = new List<Card>();
+        List<Card> p2 = new List<Card>();
         private Deck deck = new Deck();
         public List<Card> shuffled;
         public Game()
         {
-            this.shuffled = deck.Shuffle();  
+            this.shuffled = deck.Shuffle();
         }
         private void Deal()
         {
-            List<Card> p1 = new List<Card>();
-            int numCards = 1;
-            _Output.ConsoleIt("Deck Start",shuffled);
+
+            int hand = 7;
+            int players = 2;
+            int numCards = hand * players;
+
+            // _Output.ConsoleIt("Deck Start",shuffled);
             for (int c = 0; c < numCards; c++)
             {
-                p1.Add(shuffled[c]);
-                shuffled.Remove(shuffled[c]);
+
+                if (c % players == 1)
+                {
+                    p1.Add(shuffled[c]);
+
+                }
+                else
+                {
+                    p2.Add(shuffled[c]);
+                }
+
             }
 
-            _Output.ConsoleIt("Deck after Deal",shuffled);
-            _Output.ConsoleIt("Hand:  ",p1);
 
-        }          
-        public void Play()
-        {
-            Deal();
-            
+            // _Output.ConsoleIt("Deck after Deal", shuffled);
+            // _Output.ConsoleIt("Hand:  ", p1);
         }
+                  
+       // public dynamic Play()
+       // {
+          // Deal(7,2);
+          // _Output.ConsoleIt("Deck after Deal", shuffled);
+          //  _Output.ConsoleIt("P1 Hand:  ", p1);
+           // _Output.ConsoleIt("P2 Hand:  ", p2);
+
+
+       // }
     }
 }

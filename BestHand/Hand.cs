@@ -5,14 +5,15 @@ using System.Linq;
 
 namespace BestHand
 {
-    public class Hand
+    public class Hand : Deck
     {
         
         public List<Card> _Hand = new List<Card>();
+        
         public Hand(int card)
         {
-          //  Card card = new Card(face, suits);
-          //  this.hand=_Hand.Add(card);
+            List<Card> p1 = new List<Card>();
+           // p1.Add(shuffled[card]);
         }
         public int HandTotal(List<Card> hand)
         {
