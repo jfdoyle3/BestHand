@@ -13,7 +13,7 @@ namespace BestHand
         public Hand(int card)
         {
             List<Card> p1 = new List<Card>();
-           // p1.Add(shuffled[card]);
+          // p1.Add(shuffled[card]);
         }
         public int HandTotal(List<Card> hand)
         {

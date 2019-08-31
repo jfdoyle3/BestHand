@@ -5,9 +5,7 @@ namespace BestHand
 {
     public class Game
     {
-        //public Hand p1=new Hand();
-        //public Hand p2;
-        
+        public List<List<Card>> hands = new List<List<Card>>();
         private Deck deck = new Deck();
         public List<Card> shuffled;
         public Game()
@@ -16,16 +14,13 @@ namespace BestHand
         }
         private List<List<Card>> Deal(int players, int hand)
         {
-            // need a Jagged List/Array to put/remove any amount of cards on the Table in any position/cell/index.
-            // need a Jagged List/Array to have any amount of players from 1 - 52 / Hand amout 1 - 52 cards.
+        //    // need a Jagged List/Array to put/remove any amount of cards on the Table in any position/cell/index.
+        //    // need a Jagged List/Array to have any amount of players from 1 - 52 / Hand amout 1 - 52 cards.
             
             //List<List<Card>>  outer List Players  /  inner List Hands
             
             //List A: Loop A:  Make new List B -> Loop B: Add items to List B :End Loop B -> Add ListB to List A : End Loop A
-
-            List<List<Card>> hands = new List<List<Card>>();
-            
-
+            // Need to pass card by Index to Players  ..   All players Index 0 from the dck the 1,2,3 .. etc
             for (int plyr=0; plyr<players; plyr++)
             {
                 List<Card> cDealt = new List<Card>();
@@ -35,7 +30,7 @@ namespace BestHand
                     cDealt.Add(shuffled[crd]);
                     shuffled.Remove(shuffled[crd]);
                 }
-                hands.Add(cDealt);
+                    hands.Add(cDealt);
             }
 
             return hands;
