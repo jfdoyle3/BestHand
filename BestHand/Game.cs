@@ -17,7 +17,8 @@ namespace BestHand
         }
         private void Deal()
         {
-
+            // need a Jagged List/Array to put/remove any amount of cards on the Table in any position/cell/index.
+            // need a Jagged List/Array to have any amount of players from 1 - 52 / Hand amout 1 - 52 cards.
             int hand = 7;
             int players = 2;
             int numCards = hand * players;

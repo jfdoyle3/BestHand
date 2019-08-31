@@ -6,7 +6,7 @@ namespace BestHand
     {
         public int Value;
         public int Suit;
-        private string[] Suits = { "Spades", "Hearts", "Clubs", "Diamonds" };
+        private string[] Suits = { "S", "H", "C", "D" };
 
         public Card()
         {
