@@ -20,7 +20,7 @@ namespace BestHand
             //List<List<Card>>  outer List: Players  /  inner List: Hands
             
             //List A: Loop A:  Make new List B -> Loop B: Add items to List B :End Loop B -> Add ListB to List A : End Loop A
-            // Need to pass card by Index to Players  ..   All players Index 0 from the dck the 1,2,3 .. etc
+            // Need to pass card by Index to Players  ..   All players Index 0 from the deck the 1,2,3 .. etc
             for (int plyr=0; plyr<players; plyr++)
             {
                 List<Card> cDealt = new List<Card>();

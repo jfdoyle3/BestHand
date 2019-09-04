@@ -44,7 +44,7 @@ namespace BestHand
 
         //public List<List<Card>> Deal(int players, int hand)
         //{
-           
+
         //    for (int plyr = 0; plyr < players; plyr++)
         //    {
         //        List<Card> cDealt = new List<Card>();
